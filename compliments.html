@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キミへの褒め言葉</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Kosugi+Maru&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #e6f0ff);
+    }
+    .sparkle {
+      animation: sparkle 2s ease-in-out infinite;
+    }
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    .nav-link:hover {
+      color: #ff69b4;
+      transition: color 0.3s;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Navigation -->
+  <nav class="bg-pink-100 shadow-md p-4">
+    <div class="max-w-4xl mx-auto flex justify-center space-x-8">
+      <a href="index.html" class="nav-link text-lg font-semibold text-gray-700">ホーム</a>
+      <a href="compliments.html" class="nav-link text-lg font-semibold text-gray-700">キミへの褒め言葉</a>
+      <a href="relax.html" class="nav-link text-lg font-semibold text-gray-700">リラックスタイム</a>
+      <a href="games.html" class="nav-link text-lg font-semibold text-gray-700">ゲーム</a>
+      <a href="about.html" class="nav-link text-lg font-semibold text-gray-700">キミについて</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex-grow flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-lg p-8 max-w-lg text-center">
+      <h1 class="text-3xl font-bold text-pink-500 mb-4 font-['Kosugi_Maru']">キミへのスペシャルな褒め言葉！🌸</h1>
+      <p class="text-lg text-gray-700 mb-4">
+        キミの頑張りはまるで星空みたいにキラキラしてるよ！✨
+      </p>
+      <div id="compliment" class="text-md text-gray-600 mb-6">
+        キミの集中力、ほんとにすごい！まるで魔法みたい！🪄
+      </div>
+      <button onclick="showCompliment()" class="bg-purple-400 text-white px-6 py-2 rounded-full hover:bg-purple-500 transition">
+        もっと褒め言葉を！💖
+      </button>
+      <div class="mt-6 flex justify-center space-x-2">
+        <span class="text-2xl sparkle">🌟</span>
+        <span class="text-2xl sparkle">🌸</span>
+        <span class="text-2xl sparkle">🌟</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-pink-50 p-4 text-center text-gray-500">
+    <p>キミの未来は無限大！これからも応援してるよ！💫</p>
+  </footer>
+
+  <script>
+    const compliments = [
+      "キミの努力はまるで桜の花びらみたいに美しいよ！🌸",
+      "どんな難しい問題も解いちゃうキミ、めっちゃ賢い！🧠",
+      "キミの笑顔はみんなをハッピーにする魔法だよ！😊",
+      "コツコツ頑張るキミの姿、ほんとにカッコいい！💪",
+      "キミの情熱は太陽みたいに周りを照らすよ！☀️"
+    ];
+    function showCompliment() {
+      const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+      document.getElementById('compliment').innerText = randomCompliment;
+    }
+  </script>
+</body>
+</html>
